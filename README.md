@@ -82,10 +82,10 @@ Vyměňte <LAB-ID> za vaši aktuální URL adresu z adresního řádku akademie.
 
 Nahraďte <CARLOS_CSRF_TOKEN> a <CARLOS_CSRF_KEY> za vaše vlastní hodnoty odchycené od Carlose z Repeateru.
 
-# 💡 Technické vysvětlení útoku
+ 💡 Technické vysvětlení útoku
 
     Obcházení CSRF ochrany:
      Výsledný HTML kód po nastavení cookie automaticky odešle formulář se změnou e-mailu na mary@google.com s tokenem csrf, který k tomuto csrfKey patří. Jelikož server nekontroluje session uživatele, požadavek vyhodnotí jako platný a e-mail oběti úspěšně změní.
 
-CRLF / Cookie Injection (<img> tag):
- Aplikace trpí zranitelností ve vyhledávacím poli (?search=). Sekvence %0d%0a vloží do HTTP odpovědi nový řádek a hlavičku Set-Cookie: csrfKey=.... Prohlížeč oběti tak nedobrovolně přijme útočníkův csrfKey.
+     CRLF / Cookie Injection (<img> tag):
+      Aplikace trpí zranitelností ve vyhledávacím poli (?search=). Sekvence %0d%0a vloží do HTTP odpovědi nový řádek a hlavičku Set-Cookie: csrfKey=.... Prohlížeč oběti tak nedobrovolně přijme útočníkův csrfKey.
